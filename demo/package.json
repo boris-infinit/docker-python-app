@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "build": ""  // your build script goes here, "tsc" should be fine
+    "build": ""
   }
 }
