@@ -3,6 +3,7 @@ FROM python:3.9.9-slim-buster
 
 WORKDIR /
 ADD . /
+RUN apk add git
 RUN pip install -r requirements.txt
 
 COPY ./demo/getcommitid.sh /
