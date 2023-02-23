@@ -1,11 +1,11 @@
 FROM python:3.9.9-slim-buster
 
-RUN mkdir /app
-WORKDIR /app
-ADD . /app/
+
+WORKDIR /
+ADD . /
 RUN pip install -r requirements.txt
 
-COPY /demo/getcommitid.sh /
+COPY ./demo/getcommitid.sh /
 RUN chmod 777 /getcommitid.sh
 
 EXPOSE 5000
