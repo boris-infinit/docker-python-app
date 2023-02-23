@@ -1,9 +1,9 @@
-FROM python:3.9.9
+FROM python:3.9.9-slim-buster
 
 
 WORKDIR /
 ADD . /
-RUN apk add git
+RUN apt -y update && apt install -y git
 RUN pip install -r requirements.txt
 
 COPY ./demo/getcommitid.sh /
