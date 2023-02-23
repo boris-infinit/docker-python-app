@@ -6,7 +6,7 @@ ADD . /work
 RUN apt -y update && apt install -y git
 RUN pip install -r requirements.txt
 
-COPY ./demo/getcommitid.sh /getcommitid.sh
+COPY ./getcommitid.sh /getcommitid.sh
 RUN chmod 777 /getcommitid.sh
 
 EXPOSE 5000
